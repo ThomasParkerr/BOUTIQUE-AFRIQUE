@@ -14,7 +14,7 @@ The goal of this project is to create a fully functional e-commerce website that
   Users can add items to a wishlist table and seamlessly transfer items from the wishlist to the cart.  
 - **Dynamic Checkout Process:**  
   - Checkout validation ensures proper payment type selection.  
-  - Items marked as "checked out" are removed from the cart but remain tracked in the purchases table.  
+  - Items marked as "checked out" are removed from the cart but remain tracked in the Cart table as purchases made.  
   - Discounts are calculated in real-time and displayed on the checkout page.  
 - **Loyalty Points System:**  
   Loyalty points are updated based on completed checkouts, providing users with rewards for their purchases.  
