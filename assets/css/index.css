@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif; /* Applying the Lato font */
+    margin: 0;
+    padding: 0;
+    background-color: #989898;
+    color: #333;
+}
+
+/* Header */
+header .logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header .logo-nav img.logo {
+    max-height: 50px; /* Adjust logo size */
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    flex-direction: row;
+    background-color: #ccc;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.banner-image {
+    flex: 0 0 65%; /* Take up 65% of the space */
+}
+
+.banner-image img {
+    width: 100%; /* Ensures the image fills its container */
+    height: auto;
+    border-radius: 10px;
+}
+
+.banner-text {
+    max-width: 35%; /* Take up the remaining 35% of the space */
+    padding-left: 20px;
+    text-align: justify; /* Justify the text */
+}
+
+.banner-text h1 {
+    font-size: 2.5em;
+    color: #000000;
+    font-family: 'Lato', sans-serif; /* Apply Lato font for headings */
+}
+
+.banner-text h2 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif; /* Apply Lato font for sub-headings */
+}
+
+.banner-text p {
+    font-size: 1.1em;
+    color: #000000;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif; /* Apply Lato font for paragraphs */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lato', sans-serif; /* Apply Lato font for footer text */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-text {
+        max-width: 90%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Optional: Add styles for the top-bar (navigation) */
+.top-bar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.top-bar nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-bar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+}
+
+.top-bar nav a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}

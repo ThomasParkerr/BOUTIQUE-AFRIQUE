@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f4f6f7;
+    --text-color: #333;
+    --white: #ffffff;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+#payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#payment-methods label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+#payment-methods label:hover {
+    border-color: var(--secondary-color);
+}
+
+#payment-methods label input {
+    margin-bottom: 0.5rem;
+}
+
+#payment-methods .fas {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+#info {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.billing-info, #card-info, #bank-transfer-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.billing-info h4, #card-info h4, #bank-transfer-info h4 {
+    grid-column: 1 / -1;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.billing-info div, #card-info div, #bank-transfer-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input, select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.buttons button {
+    flex-grow: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.buttons .checkout {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.buttons .checkout:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.buttons .exit {
+    background-color: #e74c3c;
+    color: var(--white);
+}
+
+.buttons .exit:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    #payment-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .billing-info, #card-info, #bank-transfer-info {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}

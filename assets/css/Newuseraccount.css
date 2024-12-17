@@ -1,0 +1,188 @@
+/* General Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f5f0; /* Light beige background */
+    color: #333;
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Container for Side Navigation and Main Content */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Side Navigation Styles */
+.side-nav {
+    width: 250px;
+    background-color: #3a3a3a;
+    padding: 20px;
+    color: #fff;
+    border-right: 2px solid #ff9800; /* Accent orange border */
+}
+
+.side-nav h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.side-nav h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.side-nav ul {
+    list-style-type: none;
+}
+
+.side-nav ul li {
+    margin: 15px 0;
+}
+
+.side-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.side-nav ul li a:hover,
+.side-nav ul li a.active {
+    background-color: #ff9800;
+}
+
+.side-nav ul li a i {
+    margin-right: 10px;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Heading and Form Styles */
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #5d4037; /* Deep brown color */
+}
+
+h2 {
+    font-size: 28px;
+    color: #e65100; /* Bold orange color */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+form { background-color: #ec9706;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff9800;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e65100; /* Highlighted orange color on focus */
+}
+
+.save-btn {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #ccc;
+}
+
+/* Active Section Styling */
+.section-content {
+    display: none;
+}
+
+.section-content.active {
+    display: block;
+}
+
+/* Color Picker Styles */
+.color-picker-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.color-picker-label {
+    margin-right: 10px;
+}
+
+#background-color-picker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .side-nav {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

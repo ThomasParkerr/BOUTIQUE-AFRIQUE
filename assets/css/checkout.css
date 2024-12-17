@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows flex items to wrap on smaller screens */
+}
+
+.checkout-section {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 60%; /* On larger screens, it will take 60% of the container width */
+}
+
+.order-summary {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 35%; /* On larger screens, it will take 35% of the container width */
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.summary-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Stack the sections vertically on medium screens */
+        gap: 10px;
+    }
+    
+    .checkout-section, .order-summary {
+        flex-basis: 100%; /* Each section takes up full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Add padding around the container */
+    }
+    
+    h2 {
+        font-size: 1.5em; /* Adjust font size for headings */
+    }
+    
+    .checkout-button {
+        font-size: 1em; /* Slightly smaller button text */
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-section, .order-summary {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    
+    .summary-item {
+        font-size: 0.9em; /* Reduce font size for smaller screens */
+    }
+    
+    .checkout-button {
+        padding: 12px; /* Adjust padding for small screens */
+    }
+}

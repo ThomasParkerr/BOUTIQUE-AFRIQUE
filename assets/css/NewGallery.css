@@ -1,0 +1,107 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Main Greeting Text */
+.greeting {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Parent Container for the Gallery */
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Child Containers (Each column in the gallery) */
+.child-container {
+    flex: 1 1 30%;
+    min-width: 300px;
+    max-width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Styling for Image Wrappers */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Image Styling */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Images */
+.image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay Styling (Text + Links) */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* Overlay Text Styling */
+.overlay p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Link Styling in Overlay */
+.overlay a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.overlay a:hover {
+    background-color: #feb47b;
+}
+
+/* Responsiveness: Make gallery adjust for smaller screens */
+@media (max-width: 768px) {
+    .child-container {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .child-container {
+        flex: 1 1 100%;
+    }
+}

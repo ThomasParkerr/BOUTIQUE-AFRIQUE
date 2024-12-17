@@ -1,0 +1,127 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to right, #5b0e2d, #ffa781);
+    color: #333;
+    padding: 20px;
+}
+
+/* Back Button Styling */
+.back-button {
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #efc8b1;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #efc8b1;
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Purchase History Section */
+#purchase-history {
+    background-color: #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#purchase-history h2 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Purchase History List */
+.purchase-history {
+    list-style: none;
+    padding: 0;
+}
+
+.purchase-history li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.purchase-history li:hover {
+    background-color: #f1f1f1;
+}
+
+.purchase-history li:last-child {
+    border-bottom: none;
+}
+
+.purchase-history span {
+    font-size: 16px;
+    color: #555;
+    margin-right: 20px;
+}
+
+.purchase-history span strong {
+    font-weight: bold;
+}
+
+/* Price and Total Styling */
+.purchase-history span:nth-child(2),
+.purchase-history span:nth-child(3) {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.purchase-history span:nth-child(4) {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .purchase-history li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .purchase-history span {
+        margin-bottom: 10px;
+    }
+
+    .purchase-history span:nth-child(2),
+    .purchase-history span:nth-child(3) {
+        font-size: 16px;
+    }
+}

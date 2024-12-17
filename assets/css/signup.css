@@ -1,0 +1,154 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: stretch; /* Ensure the body takes up the full height */
+    justify-content: center;
+    min-height: 100vh; /* Ensures the body always fills the viewport height */
+    background-color: #f9f9f9;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    width: 100%; /* Ensure the container takes up the full width */
+    height: 100vh; /* Full height of the viewport */
+    max-width: 100%; /* Make the container stretch fully across */
+    background: #fff;
+    border-radius: 0; /* Remove any rounding for full-width effect */
+    overflow: hidden;
+}
+
+/* Image Section Styles */
+.image-section {
+    flex: 1; /* Take up 50% of the container */
+    background-image: url('../../assets/images/afriquelogin.jpg'); /* Ensure image path is correct */
+    background-size: cover;
+    background-position: center;
+    display: block;
+    height: 100vh; /* Ensure the image section takes full height */
+}
+
+/* Sign-Up Form Section */
+.signup-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #fff;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-section h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+.signup-section form {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Sign Up Button Styles */
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+/* Bottom Text Style */
+.signup-section p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+.signup-section a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .image-section {
+        display: block; /* Keep the image visible on larger screens */
+    }
+
+    .signup-section {
+        padding: 40px 30px; /* Add some padding for larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .signup-section {
+        padding: 20px 10px; /* Reduce padding on small screens */
+    }
+
+    .signup-section h1 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+
+    .signup-button {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .image-section {
+        display: none; /* Hide image section on small screens */
+    }
+
+    .container {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+}

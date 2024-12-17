@@ -1,0 +1,152 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("../images/loyalty.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh; /* Ensures the background covers the entire page */
+}
+
+/* Header Style */
+.main-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e7d3b; /* Dark Green */
+    margin-top: 50px;
+}
+
+/* Container and Cart Wrapper */
+.cart-wrap {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin-top: 50px;
+}
+
+/* Table Style */
+.table-wishlist {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #388e3c; /* African Green */
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+td .img-product img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.display-flex {
+    display: flex;
+    align-items: center;
+}
+
+.name-product {
+    margin-left: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Green and Gold Theme */
+.in-stock-box {
+    background-color: #66bb6a; /* Light Green */
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.round-black-btn {
+    background-color: #388e3c; /* African Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.round-black-btn:hover {
+    background-color: #2e7d32; /* Darker Green */
+}
+
+.trash-icon {
+    color: #d32f2f; /* Red */
+    font-size: 20px;
+}
+
+.trash-icon:hover {
+    color: #b71c1c; /* Dark Red */
+}
+
+/* Back Button */
+.back-btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn {
+    background-color: #388e3c; /* African Green */
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background-color: #2e7d32;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .table-wishlist {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .main-heading {
+        font-size: 28px;
+    }
+
+    .back-btn-container {
+        margin-top: 20px;
+    }
+}

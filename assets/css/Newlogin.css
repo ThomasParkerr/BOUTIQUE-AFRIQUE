@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent unwanted scrollbars */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.image-section {
+    flex: 1;
+    background-image: url('../../assets/images/afriquesignin.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Ensures the image fills the height */
+}
+
+.login-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9; /* Subtle background color for contrast */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for separation */
+}
+
+.login-section h1 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+}
+
+.login-section form {
+    width: 100%;
+    max-width: 350px; /* Slightly wider for better usability */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+.form-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Focus effect */
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+.login-section p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+.login-section a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .image-section {
+        height: 50vh; /* Adjust image height */
+    }
+
+    .login-section {
+        height: 50vh;
+        box-shadow: none; /* Remove shadow in vertical layout */
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-section form {
+        max-width: 280px; /* Adjust form width */
+    }
+
+    .form-group input {
+        font-size: 0.9em;
+    }
+
+    .login-button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .login-section h1 {
+        font-size: 1.8em;
+    }
+
+    .login-section p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-section {
+        display: none; /* Hide the image for small screens */
+    }
+
+    .login-section {
+        width: 100%; /* Take full width */
+        padding: 15px;
+        box-shadow: none; /* Remove shadow */
+    }
+
+    .login-section h1 {
+        font-size: 1.5em;
+    }
+
+    .login-section form {
+        max-width: 250px; /* Adjust form size for smaller screens */
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .login-button {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+
+    .login-section p {
+        font-size: 0.75em;
+    }
+}

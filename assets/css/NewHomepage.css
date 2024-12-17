@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('../images/homepage.jpg'); /* Use an African pattern image for background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Ensures the background covers the entire page */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.top-bar {
+    background-color: wheat;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+    font-size: 14px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #444; /* Slightly darker for readability */
+    font-weight: 500;
+}
+
+.user-options a {
+    color: #ff5733;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.user-options a:hover {
+    color: #c0392b;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle hover effect */
+}
+
+.logo {
+    font-size: 28px;
+    color: #ff5733;
+    font-weight: bold;
+    margin: 20px;
+    letter-spacing: 1px;
+}
+
+.logo-nav {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: wheat;
+    border-bottom: 2px solid wheat;
+}
+
+.logo-nav nav a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo-nav nav a:hover {
+    color: #020100;
+}
+
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    color: wheat;
+    position: relative;
+    z-index: 1; /* Ensure banner is on top of the background */
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: wheat;
+    margin-bottom: 10px;
+}
+
+.banner-content h2 {
+    font-size: 28px;
+    color: #ff5733;
+}
+
+.banner-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.banner-content button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.sale-banner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(199, 3, 3);
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows categories to wrap on smaller screens */
+    z-index: 1; /* Ensure categories are on top of background */
+}
+
+.category {
+    background-color: wheat;
+    color: #333;
+    padding: 7px;
+    text-align: center;
+    width: 120px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category, .product {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    width: 220px; /* Adjust the width of each item */
+    height: 250px; /* Limit the height for consistency */
+    overflow: hidden; /* Hide any overflowing image parts */
+    position: relative; /* Allows positioning of text over the image */
+}
+
+.category img, .product img {
+    width: 100%; /* Make images fill the container width */
+    height: 100%; /* Make images fill the container height */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+    border-radius: 10px;
+    border: none; /* Optional: rounded corners for images */
+}
+
+/* Text overlay on the image */
+.category p, .product p {
+    position: absolute;
+    bottom: 30px; /* Position the text towards the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Text color for visibility */
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: shadow to make text stand out */
+    margin: 0;
+}
+
+.category:hover {
+    transform: scale(1.30);
+    background-color: none;
+}
+
+.trending-products {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure trending products section is on top */
+}
+
+.trending-products h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    flex-wrap: wrap; /* Allows product list items to wrap on smaller screens */
+}
+
+.product {
+    background-color: wheat;
+    color: #333;
+    padding: 7px;
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.30);
+    background-color: none;
+}
+
+/* African Themed Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+    overflow: auto;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: brown; /* Brown background */
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%; /* Adjust this value to change the size of the modal */
+    max-width: 600px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Modal Image */
+.modal-image {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Text */
+.modal-text p {
+    font-size: 16px;
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #8f705c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+/* Hover Effects for Buttons */
+button:hover {
+    background-color: #ff6347; /* Tomato */
+    color: white;
+    border-color: #ff6347;
+}
+
+/* Category Buttons Section */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adds space between buttons */
+    margin-bottom: 30px;
+}
+
+/* Product Type Buttons Section */
+.product-type-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Active button styles */
+button:active {
+    background-color: #c0392b; /* Dark red background on click */
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
+
+/* Focus effect for accessibility */
+button:focus {
+    outline: none; /* Removes the default focus outline */
+    box-shadow: 0 0 10px rgba(255, 87, 51, 0.7); /* Adds a custom focus ring */
+}
+
+#men-categories, #women-categories {
+    display: flex;
+    justify-content: center;  /* Centers buttons horizontally */
+    align-items: center;      /* Centers buttons vertically */
+    flex-direction: column;   /* Stacks buttons vertically */
+    height: 100vh;            /* Full viewport height */
+    text-align: center;       /* Centers text inside the buttons */
+}
+
+button {
+    background-color: #ff5733;  /* Vibrant orange background */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;  /* Adds spacing between buttons */
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    text-transform: capitalize; /* Ensures button text is properly formatted */
+}
+
+
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+    }
+
+    .banner-content h2 {
+        font-size: 24px;
+    }
+
+    .categories {
+        gap: 15px;
+    }
+
+    .category {
+        width: 140px; /* Slightly larger categories on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content h2 {
+        font-size: 20px;
+    }
+
+    .categories {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product {
+        width: 100%; /* Full width for products on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .banner-content h1 {
+        font-size: 24px;
+    }
+
+    .banner-content h2 {
+        font-size: 18px;
+    }
+
+    .category {
+        width: 100%; /* Full width for categories on small screens */
+    }
+
+    .product {
+        width: 100%; /* Full width for products on small screens */
+    }
+}

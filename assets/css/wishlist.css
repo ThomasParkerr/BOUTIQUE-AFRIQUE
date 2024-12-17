@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle hover effect for the container */
+}
+
+h1 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.wishlist-item {
+    display: flex;
+    flex-wrap: wrap; /* Ensure layout remains clean on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.2s ease;
+}
+
+.wishlist-item:last-child {
+    border-bottom: none;
+}
+
+.wishlist-item:hover {
+    background-color: #f9f9f9; /* Highlight item on hover */
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 2; /* Flex-grow for better alignment */
+}
+
+.item-details img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.item-details img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.item-info {
+    max-width: 400px;
+}
+
+.item-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+    word-break: break-word; /* Prevent overflow for long text */
+}
+
+.item-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.wishlist-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.wishlist-actions button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.wishlist-actions button:hover {
+    transform: translateY(-2px); /* Button lift effect */
+}
+
+.move-to-cart {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.move-to-cart:hover {
+    background-color: #45a049;
+}
+
+.remove-item {
+    background-color: #f44336;
+    color: white;
+}
+
+.remove-item:hover {
+    background-color: #e53935;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wishlist-item {
+        flex-direction: column; /* Stack content vertically on small screens */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .item-details img {
+        max-width: 60px; /* Scale down images on small screens */
+    }
+
+    .wishlist-actions {
+        flex-wrap: wrap; /* Allow buttons to wrap if needed */
+        gap: 5px;
+    }
+
+    .wishlist-actions button {
+        width: 100%; /* Full-width buttons on small screens */
+    }
+}
